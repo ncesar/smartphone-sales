@@ -1,3 +1,10 @@
+## Como executar o projeto
+  1. Ir na pasta raiz e digitar `npm i` ou `yarn i`
+  2. Ir na pasta API e digitar `npm i` ou `yarn i`
+  3. Digitar `npm start` na pasta raiz
+  4. Digitar `npm start` na pasta da API
+  5. Acessar [http://localhost:3000](http://localhost:3000) para ver o projeto funcionando no navegador.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
