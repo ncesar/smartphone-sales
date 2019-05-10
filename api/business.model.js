@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const Joigoose = require('joigoose')(mongoose);
 const Joi = require('@hapi/joi');
 
-// Define collection and schema for Business
+// Schema para Business com o Joi(joigoose)
 
 var joiSchema = Joi.object({
   model: Joi.string().alphanum().min(2).max(255).trim().required().error(errors => {

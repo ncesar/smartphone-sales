@@ -35,7 +35,6 @@ class App extends Component {
             </div>
           </nav> <br/>
           <h2>Welcome to this Fullstack Challenge</h2> <br/>
-          <p>The idea was to create a CRUD with search function and some other validations.</p>
           <p>This app Frontend was made with ReactJS(using Router, Axios and Bootstrap),  and the backend was made with NodeJS(using Express, MongoDB, Mongoose and Joi for validations).</p>
           <p>It's not completed but i tried my best.</p>
           <Switch>

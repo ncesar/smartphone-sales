@@ -1,10 +1,9 @@
 const express = require('express');
 const businessRoutes = express.Router();
 
-// Require Business model in our routes module
+//precisamos do business para as rotas
 let Business = require('./business.model');
 
-// Defined store route
 businessRoutes.route('/add').post(function (req, res) {
   let business = new Business(req.body);
   business.save()
@@ -16,7 +15,7 @@ businessRoutes.route('/add').post(function (req, res) {
     });
 });
 
-// Defined get data(index or listing) route
+// get da data
 businessRoutes.route('/').get(function (req, res) {
     Business.find(function(err, businesses){
     if(err){
@@ -28,7 +27,7 @@ businessRoutes.route('/').get(function (req, res) {
   });
 });
 
-// Defined edit route
+// definindo a rota de edit
 businessRoutes.route('/edit/:id').get(function (req, res) {
   let id = req.params.id;
   Business.findById(id, function (err, business){
@@ -36,7 +35,7 @@ businessRoutes.route('/edit/:id').get(function (req, res) {
   });
 });
 
-//  Defined update route
+//  Definindo a rota de update
 businessRoutes.route('/update/:id').post(function (req, res) {
     Business.findById(req.params.id, function(err, business) {
     if (!business)
@@ -61,7 +60,7 @@ businessRoutes.route('/update/:id').post(function (req, res) {
   });
 });
 
-// Defined delete | remove | destroy route
+// Definindo da rota de deletar
 businessRoutes.route('/delete/:id').get(function (req, res) {
     Business.findByIdAndRemove({_id: req.params.id}, function(err, business){
         if(err) res.json(err);
